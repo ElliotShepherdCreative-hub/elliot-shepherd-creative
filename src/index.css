@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-warm-ivory: #FAF9F6;
+  --color-warm-card: #FFFFFF;
+  --color-editorial-dark: #191614;
+  --color-editorial-muted: #5C554E;
+  --color-editorial-border: #E8E4DF;
+  --color-editorial-accent: #8E4B28;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-warm-ivory);
+  color: var(--color-editorial-dark);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* =========================================================
+   Midnight Editorial Theme Overrides (Luxury Nocturnal Mode)
+   ========================================================= */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0E0C0A;
+  color: #D8D2CA;
+}
+
+/* Surfaces & Containers */
+html.dark .bg-\[\#FAF9F6\] {
+  background-color: #0E0C0A !important;
+}
+
+html.dark .bg-white {
+  background-color: #161311 !important;
+}
+
+html.dark .bg-stone-50 {
+  background-color: #1B1714 !important;
+}
+
+html.dark .bg-stone-100 {
+  background-color: #221D19 !important;
+}
+
+html.dark .bg-stone-200 {
+  background-color: #2B2520 !important;
+}
+
+html.dark .bg-stone-700 {
+  background-color: #38302A !important;
+  color: #FAF8F5 !important;
+}
+
+html.dark .bg-stone-800 {
+  background-color: #26201B !important;
+}
+
+/* Borders */
+html.dark .border-\[\#E8E4DF\] {
+  border-color: #2D2621 !important;
+}
+
+html.dark .border-stone-200 {
+  border-color: #2D2621 !important;
+}
+
+html.dark .border-stone-300 {
+  border-color: #383029 !important;
+}
+
+/* Typography Contrast */
+html.dark .text-\[\#191614\],
+html.dark .text-\[\#1C1A18\] {
+  color: #FAF8F5 !important;
+}
+
+html.dark .text-\[\#5C554E\] {
+  color: #A8A096 !important;
+}
+
+html.dark .text-stone-800 {
+  color: #FAF8F5 !important;
+}
+
+html.dark .text-stone-700 {
+  color: #D3CDC4 !important;
+}
+
+html.dark .text-stone-600 {
+  color: #ADA59B !important;
+}
+
+html.dark .text-stone-500 {
+  color: #8C847A !important;
+}
+
+html.dark .text-stone-400 {
+  color: #787067 !important;
+}
+
+/* Terracotta / Copper Accent Shift in Dark Mode for Higher Contrast */
+html.dark .text-\[\#8E4B28\] {
+  color: #E09F75 !important;
+}
+
+html.dark .bg-\[\#8E4B28\] {
+  background-color: #B35E33 !important;
+}
+
+html.dark .border-\[\#8E4B28\] {
+  border-color: #E09F75 !important;
+}
+
+html.dark .bg-\[\#8E4B28\]\/10 {
+  background-color: rgba(224, 159, 117, 0.12) !important;
+  color: #E09F75 !important;
+}
+
+/* Form Elements */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #171412 !important;
+  color: #FAF8F5 !important;
+  border-color: #38302A !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #70685E !important;
+}
+
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  border-color: #E09F75 !important;
+}
+
+/* Mobile Drawer & Scrolled Nav */
+html.dark .backdrop-blur-md.bg-\[\#FAF9F6\]\/95 {
+  background-color: rgba(14, 12, 10, 0.95) !important;
+  border-color: #2D2621 !important;
+}
+
+/* Dark Mode Button Styling Refinements */
+html.dark button.bg-\[\#191614\],
+html.dark a.bg-\[\#191614\],
+html.dark .bg-\[\#191614\] {
+  background-color: #201B18 !important;
+  border: 1px solid #383029 !important;
+  color: #FAF8F5 !important;
+}
+
+html.dark button.bg-\[\#191614\]:hover,
+html.dark a.bg-\[\#191614\]:hover {
+  background-color: #2B2420 !important;
+  border-color: #E09F75 !important;
+}
+
+/* In dark mode, light buttons like "bg-white text-[#191614]" on cards */
+html.dark .bg-white.text-\[\#191614\] {
+  color: #FAF8F5 !important;
+}
+
+/* Badges and Callouts in Dark Mode */
+html.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  color: #FCD34D !important;
+  border-color: rgba(245, 158, 11, 0.25) !important;
+}
+
+html.dark .text-amber-800,
+html.dark .text-amber-900 {
+  color: #FCD34D !important;
+}
+
+html.dark .text-amber-700 {
+  color: #E09F75 !important;
+}
+
+html.dark .border-amber-200 {
+  border-color: rgba(245, 158, 11, 0.25) !important;
+}
+
+html.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  color: #6EE7B7 !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+html.dark .text-emerald-800,
+html.dark .text-emerald-700 {
+  color: #6EE7B7 !important;
+}
+
+html.dark .border-emerald-200 {
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Card Depth and Subtle Contrast */
+html.dark .shadow-xs,
+html.dark .shadow-sm,
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Selection */
+html.dark ::selection {
+  background-color: #8E4B28;
+  color: #FAF8F5;
+}
+
